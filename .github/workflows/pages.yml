@@ -37,7 +37,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Build
-        run: cd src/thumb.png out/thumb.png
+        run: cp src/thumb.png out/thumb.png
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
