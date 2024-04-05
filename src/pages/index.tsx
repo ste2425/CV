@@ -103,8 +103,8 @@ export function CVComponent({ cv }: ICVComponentProps) {
       <Row>
         <Col xs={8} className="bg-white">
           <div className="p-4">
-            {cv.jobs.map((job) => 
-              <div>
+            {cv.jobs.map((job, i) => 
+              <div key={i}>
                 <h3 className="fs-5">{job.name} - <small>{job.company}</small></h3>
                 <p className="pt-2 fs-6 text-primary">{job.date}</p>
                 <p className="pt-2 fs-6 pb-3">{job.description}</p>
@@ -126,8 +126,8 @@ export function CVComponent({ cv }: ICVComponentProps) {
           </div>
 
           <div className="p-3">
-            {cv.certifications.map((cert) => 
-              <div>
+            {cv.certifications.map((cert, i) => 
+              <div key={i}>
                 <h3 className="fs-5">{cert.name} - <small>{cert.provider}</small></h3>
                 <p className="pt-3 fs-6 text-primary">{cert.date}</p>
                 <p className="pt-1 fs-6">{cert.outcome}</p>
