@@ -31,3 +31,32 @@ body {
     text-wrap: balance;
   }
 }
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.gray {
+  background-color: #333333;
+}
+
+.gray2 {
+  background-color: #e6e6e6;
+}
+
+.blue {
+  background-color: #00798b;
+}
+
+@media print {
+  .container {
+    max-width: 100%;
+    padding:0px;
+  }
+}
+
+.fs-6 {
+  font-size: calc(1rem - 4px) !important;
+}
+
+.fs-7 {
+  font-size: calc(1rem - 8px) !important;
+}
