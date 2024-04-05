@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta name="og:title" content="Stephen Cooper - CV" />
         <meta name="og:description" content="Welcome to my CV. Hire me. Go on." />
-        <meta name="og:image" content="thumb.png" />
+        <meta name="og:image" content="/CV/thumb.png" />
       </Head>
       <body>
         <Main />
