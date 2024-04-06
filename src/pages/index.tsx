@@ -67,10 +67,10 @@ export function CVComponent({ cv }: ICVComponentProps) {
     <Container>
       <Row>
         <Col xs={12} md={8} className="gray text-white">
-          <h1 className="fs-1 p-5">{cv.name}</h1>
+          <h1 className="fs-1 p-5 text-center">{cv.name}</h1>
         </Col>
         <Col xs={12} md={4} className="blue text-white col-4 d-flex justify-content-center align-items-center">
-          <p className="fs-4">{cv.jobTitle}</p>
+          <p className="fs-4 p-3 text-center">{cv.jobTitle}</p>
         </Col>
       </Row>
       <Row>
@@ -96,7 +96,10 @@ export function CVComponent({ cv }: ICVComponentProps) {
         </Col>
       </Row>
       <Row>
-        <Col xs={12} md={8} className="gray text-white d-flex justify-content-center align-items-center">
+        <Col xs={8} className="d-none d-md-flex gray text-white justify-content-center align-items-center">
+          <h2 className="fs-4 p-3">Employeement</h2>
+        </Col>
+        <Col xs={12} className="d-md-none blue text-white d-flex justify-content-center align-items-center">
           <h2 className="fs-4 p-3">Employeement</h2>
         </Col>
         <Col xs={4} className="d-none d-md-flex blue text-white d-flex justify-content-center align-items-center">
