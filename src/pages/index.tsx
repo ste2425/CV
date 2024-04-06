@@ -66,25 +66,28 @@ export function CVComponent({ cv }: ICVComponentProps) {
   return (
     <Container>
       <Row>
-        <Col xs={8} className="gray text-white">
+        <Col xs={12} md={8} className="gray text-white">
           <h1 className="fs-1 p-5">{cv.name}</h1>
         </Col>
-        <Col xs={4} className="blue text-white col-4 d-flex justify-content-center align-items-center">
+        <Col xs={12} md={4} className="blue text-white col-4 d-flex justify-content-center align-items-center">
           <p className="fs-4">{cv.jobTitle}</p>
         </Col>
       </Row>
       <Row>
-        <Col xs={8} className="blue text-white">
+        <Col xs={12} md={8} className="blue text-white">
         </Col>
-        <Col xs={4} className="gray text-white d-flex justify-content-center align-items-center">
+        <Col xs={4} className="d-none d-md-flex gray text-white justify-content-center align-items-center">
           <h2 className="fs-4 p-3">Contact</h2>
         </Col>
       </Row>
       <Row>
-        <Col xs={8} className="bg-white">
+        <Col xs={12} md={8} className="bg-white">
           {cv.introduction.map((intro, i) => <p key={i} className="p-4">{intro}</p>)}
         </Col>
-        <Col xs={4} className="gray2">
+        <Col xs={12} className="d-md-none gray text-white d-flex justify-content-center align-items-center">
+          <h2 className="fs-4 p-3">Contact</h2>
+        </Col>
+        <Col xs={12} md={4} className="gray2">
             {cv.socials.map(({ name, url }, i) => 
               <div key={i}className="pt-3 text-center">
                 <a className="w-100 text-primary" href={url}><u>{name}</u></a>
@@ -93,15 +96,15 @@ export function CVComponent({ cv }: ICVComponentProps) {
         </Col>
       </Row>
       <Row>
-        <Col xs={8} className="gray text-white d-flex justify-content-center align-items-center">
+        <Col xs={12} md={8} className="gray text-white d-flex justify-content-center align-items-center">
           <h2 className="fs-4 p-3">Employeement</h2>
         </Col>
-        <Col xs={4} className="blue text-white d-flex justify-content-center align-items-center">
+        <Col xs={4} className="d-none d-md-flex blue text-white d-flex justify-content-center align-items-center">
           <h2 className="fs-4 p-3">Technologies</h2>
         </Col>
       </Row>
       <Row>
-        <Col xs={8} className="bg-white">
+        <Col xs={12} md={8} className="bg-white">
           <div className="p-4">
             {cv.jobs.map((job, i) => 
               <div key={i}>
@@ -112,7 +115,10 @@ export function CVComponent({ cv }: ICVComponentProps) {
             )}
           </div>
         </Col>
-        <Col xs={4} className="gray2 p-0">
+        <Col xs={12} className="d-md-none blue text-white d-flex justify-content-center align-items-center">
+          <h2 className="fs-4 p-3">Technologies</h2>
+        </Col>
+        <Col xs={12} md={4} className="gray2 p-0">
           <div className="d-flex flex-wrap">
             {cv.knownTechnologies.map((t, i) => 
               <p className="ps-3 pe-3 pt-3" key={i}>{t}</p>
