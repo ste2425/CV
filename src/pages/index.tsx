@@ -62,6 +62,33 @@ interface ICVComponentProps {
   cv: ICV
 }
 
+interface IEntityDescription {
+  name: string,
+  subName?: string,
+  date?: string,
+  summary?: string,
+  description: string,
+  link?: string
+}
+
+interface IEntityDescriptionComponentProps {
+  entities: IEntityDescription[]
+}
+
+function EntityDescriptionComponent({ entities }: IEntityDescriptionComponentProps) {
+  return (<div>
+    {entities.map((e, i) => 
+              <div key={i}>
+                <h3 className="fs-5">{e.name} {e.subName && <span> - <small>{e.subName}</small></span>}</h3>
+                {e.date && <p className="pt-3 fs-6 text-primary">{e.date}</p>}
+                {e.link && <a className="w-100 text-primary" href={e.link}><u>{e.link}</u></a>}
+                { e.summary && <p className="pt-1 fs-6">{e.summary}</p>}
+                <p className="pt-2 fs-6 pb-3">{e.description}</p>
+              </div>
+            )}
+  </div>)
+}
+
 export function CVComponent({ cv }: ICVComponentProps) {
   return (
     <Container>
@@ -146,31 +173,32 @@ export function CVComponent({ cv }: ICVComponentProps) {
           </div>
         </Col>
       </Row>
-      <Row>
+      <Row className="bg-white">
         <Col className="blue text-white">
           <h2 className="fs-4 p-3"> Personal Projects </h2>
         </Col>
       </Row>
-      {cv.projects.map(({ name, url, description }, i) => (
-        <Row key={i}>
-          <h2>{name}</h2>
-          <Button href={url}>{url}</Button>
-          <p>{description}</p>
-        </Row>))
-      }
-      <Row>
-        <h2>Contributions to Open-Source projects</h2>
-        <p>I’ve performed multiple contributions to open-source projects.</p>
-        <ul>
-          {cv.openSourceContributions.map(({ name, url, description}, i) =>
-              <li key={i}>
-                <Row>
-                  <Col><Button href={url}>{name}</Button></Col>
-                  <Col>{description}</Col>
-                </Row>
-            </li>
-          )}
-        </ul>
+      
+      <Row className="bg-white pt-3 pe-3 ps-3">
+        <EntityDescriptionComponent entities={cv.projects.map(p => ({
+                    name: p.name,
+                    description: p.description,
+                    link: p.url
+                }))} />
+      </Row>
+
+      <Row className="bg-white pe-3 ps-3">
+        <Col>
+          <h2 className="fs-4 pt-3 pb-3"> Contributions to Open-Source projects </h2>
+        </Col>
+      </Row>
+
+      <Row className="bg-white pb-2 pe-3 ps-3">
+        <EntityDescriptionComponent entities={cv.openSourceContributions.map(o => ({
+            name: o.name,
+            description: o.description,
+            link: o.url
+        }))} />
       </Row>
     </Container>
   );
