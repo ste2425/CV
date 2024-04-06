@@ -60,3 +60,7 @@ body {
 .fs-7 {
   font-size: calc(1rem - 8px) !important;
 }
+
+:root {
+  color-scheme: only light;
+}

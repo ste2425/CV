@@ -8,7 +8,6 @@ export default function Document() {
         <meta name="og:description" content="Welcome to my CV. Hire me. Go on." />
         <meta name="og:image" content="/CV/thumb.png" />
         <meta name="theme-color" content="#00798b" />
-        <meta name="color-scheme" content="only light" />
       </Head>
       <body>
         <Main />
