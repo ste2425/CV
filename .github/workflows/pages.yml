@@ -36,8 +36,10 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Coppy thumb
+      - name: Copy thumb
         run: cp src/thumb.png out/thumb.png
+      - name: Generate PDF
+        run: npm run pdfGen
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
@@ -48,5 +50,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-      - name: Generate PDF
-        run: npm run pdfGen

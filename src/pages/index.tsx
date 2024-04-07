@@ -93,7 +93,7 @@ export function CVComponent({ cv }: ICVComponentProps) {
   return (
     <Container>
       <Row>
-        <Col xs={12} md={8} className="gray text-white flex-direction-column d-flex justify-content-center align-items-center">
+        <Col xs={12} md={8} className="gray text-white flex-column d-flex justify-content-center align-items-center">
           <h1 className="fs-1 p-5 pb-3 text-center">{cv.name}</h1>
           <a className="text-primary generate-message" href="StephenCooper-CV.pdf" download="StephenCooper-CV.pdf"><u>Download as PDF</u></a>
         </Col>
