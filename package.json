@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pdfGen": "node pdfGen.js"
+    "pdfGen": "playwright install && node pdfGen.js"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
