@@ -93,15 +93,17 @@ export function CVComponent({ cv }: ICVComponentProps) {
   return (
     <Container>
       <Row>
-        <Col xs={12} md={8} className="gray text-white">
-          <h1 className="fs-1 p-5 text-center">{cv.name}</h1>
+        <Col xs={12} md={8} className="gray text-white flex-direction-column d-flex justify-content-center align-items-center">
+          <h1 className="fs-1 p-5 pb-3 text-center">{cv.name}</h1>
+          <a className="text-primary generate-message" href="StephenCooper-CV.pdf" download="StephenCooper-CV.pdf"><u>Download as PDF</u></a>
         </Col>
         <Col xs={12} md={4} className="blue text-white col-4 d-flex justify-content-center align-items-center">
           <p className="fs-4 p-3 text-center">{cv.jobTitle}</p>
         </Col>
       </Row>
       <Row>
-        <Col xs={12} md={8} className="blue text-white">
+        <Col xs={12} md={8} className="blue text-white d-flex justify-content-center align-items-center">
+          <p className="generated-message d-none">This document was auto generated from my live CV <a className="w-100" href="https://ste2425.github.io/CV"><u>here</u></a></p>
         </Col>
         <Col xs={4} className="d-none d-md-flex gray text-white justify-content-center align-items-center">
           <h2 className="fs-4 p-3">Contact</h2>
