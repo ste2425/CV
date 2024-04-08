@@ -26,7 +26,7 @@ interface ISocial {
 
 interface IProject {
   name: string,
-  url: string,
+  url?: string,
   description: string
 }
 
@@ -126,10 +126,10 @@ export function CVComponent({ cv }: ICVComponentProps) {
       </Row>
       <Row>
         <Col xs={8} className="d-none d-md-flex gray text-white justify-content-center align-items-center">
-          <h2 className="fs-4 p-3">Employeement</h2>
+          <h2 className="fs-4 p-3">Employment</h2>
         </Col>
         <Col xs={12} className="d-md-none blue text-white d-flex justify-content-center align-items-center">
-          <h2 className="fs-4 p-3">Employeement</h2>
+          <h2 className="fs-4 p-3">Employment</h2>
         </Col>
         <Col xs={4} className="d-none d-md-flex blue text-white d-flex justify-content-center align-items-center">
           <h2 className="fs-4 p-3">Technologies</h2>
@@ -233,6 +233,9 @@ export default function Home() {
     ],
     knownTechnologies: ['NodeJS', 'NestJS', 'Angular', 'React', '.NET Core', 'MVC', 'Banjo', 'NextJS', 'Kazooie'],
     projects: [{
+      name: 'General DIY Projects',
+      description: 'I like to consider myself somewhat mechanically minded. I believe that is why I enjoy software development so much. I get the same enjoyment understanding a system and problem solving as I did learning how to replace a timing belt. I\'m regularly doing repairs to the house or the cars. My most recent project on the house was putting up a wall and knocking through a doorway to make a bedroom for my son. On the car I recently replaced its timing belt (first time I\'ve attempted that) and fully rebuilt its suspension front and back. That included dropping both subframes and painting them in the process. Up next for the house is to build a driveway and a lean to so I can work on the car in the dry ready to respray some body panels (never done that before either but looking forward to trying).'
+    }, {
       name: 'Dotnet Runner',
       url: 'https://github.com/ste2425/DotnetRunner',
       description: 'An ElectronJS based application to launch multiple .NET core applications. Whilst working at Cascade we had several .NET core applications and launching everyone individually was tedious. I wanted to learn Electron so decided to build a little app which could launch multiple for me from an easy to access context menu in the hosting operating systems tray. In hindsight IDE integrations would have made this somewhat redundant but it was a fun learning experience for technologies i had not used at this point. '
@@ -273,7 +276,7 @@ export default function Home() {
       name: 'Web Developer',
       company: 'RegTransfers',
       date: '2023 - PRESENT',
-      description: 'Part of a four-man team of highly experienced developers. My responsibilities are the maintenance of the various systems and infrastructure and to provide new value rich features for the business. I can work independently throughout all the stack layers as well collaborate with other team members. We maintain the Kubernetes infrastructure and manage it with Flux. The solution is a highly distributed micro service architecture where services extensively leverage event-based communications. My most recently built feature is a search assistant tool built using Web Components (the first in the system, hopefully not the last!). '
+      description: 'Part of a four-man team of highly experienced developers. My responsibilities are the maintenance of the various systems and infrastructure and to provide new value rich features for the business. I can work independently throughout all the stack layers as well as collaborate with other team members. We maintain the Kubernetes infrastructure and manage it with Flux. The solution is a highly distributed micro service architecture where services extensively leverage event-based communications. My most recently built feature is a search assistant tool built using Web Components (the first in the system, hopefully not the last!). '
     }, {
       name: 'Senior Developer',
       company: 'Trailight',

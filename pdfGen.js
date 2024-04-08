@@ -9,6 +9,7 @@ const playwright = require('playwright');
   await page.waitForSelector('.fs-1.p-5.text-center');
 
   await page.evaluate(() => {
+    document.querySelector('h1.pb-1').classList.remove('pb-1');
     document.querySelector('.generated-message').classList.remove('d-none'); // Show the auto generated message
     document.querySelector('.generate-message').classList.add('d-none'); // Hide the download pdf button
   });
