@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { ICV } from "@/cvDataTypes";
 import { EntityDescriptionComponent } from "@/components/entityDescriptionComponent";
+import { HeaderComponent } from "./headerComponent";
 
 export interface ICVComponentProps {
     cv: ICV
@@ -11,15 +12,7 @@ export interface ICVComponentProps {
 export function CVComponent({ cv }: ICVComponentProps) {
     return (
         <Container>
-            <Row>
-                <Col xs={12} md={8} className="gray text-white flex-column d-flex justify-content-center align-items-center">
-                    <h1 className="fs-1 p-5 pb-1 text-center">{cv.name}</h1>
-                    <a className="text-primary generate-message" href="StephenCooper-CV.pdf" download="StephenCooper-CV.pdf"><u>Download as PDF</u></a>
-                </Col>
-                <Col xs={12} md={4} className="blue text-white col-4 d-flex justify-content-center align-items-center">
-                    <p className="fs-4 p-3 text-center">{cv.jobTitle}</p>
-                </Col>
-            </Row>
+            <HeaderComponent name={cv.name} jobTitle={cv.jobTitle} downloadUrl="StephenCooper-CV.pdf" />
             <Row>
                 <Col xs={12} md={8} className="blue text-white d-flex justify-content-center align-items-center">
                     <p className="generated-message d-none">This document was auto generated from my live CV <a className="w-100" href="https://ste2425.github.io/CV"><u>here</u></a></p>
