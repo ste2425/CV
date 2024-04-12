@@ -14,7 +14,7 @@ export default function Test() {
       className={`flex h-100 flex-col items-center justify-between ${inter.className}`}
     >
       <Container>
-            <HeaderComponent name={cv.name} jobTitle={cv.jobTitle} downloadUrl="StephenCooper-CV.pdf" />
+            <HeaderComponent name={cv.name} jobTitle={cv.jobTitle} downloadUrl="StephenCooper-Cover.pdf" />
 
             <Row>
                 <Col xs={12} md={8} className="blue text-white d-flex justify-content-center align-items-center">
