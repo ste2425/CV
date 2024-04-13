@@ -15,7 +15,7 @@ export function CVComponent({ cv }: ICVComponentProps) {
             <HeaderComponent name={cv.name} jobTitle={cv.jobTitle} downloadUrl="StephenCooper-CV.pdf" />
             <Row>
                 <Col xs={12} md={8} className="blue text-white d-flex justify-content-center align-items-center">
-                    <p className="generated-message d-none">This document was auto generated from my live CV <a className="w-100" href="https://ste2425.github.io/CV"><u>here</u></a></p>
+                    <p className="generated-message d-none">This document was auto generated from my live CV <a className="w-100" href="https://ste2425.github.io"><u>here</u></a></p>
                 </Col>
                 <Col xs={4} className="d-none d-md-flex gray text-white justify-content-center align-items-center">
                     <h2 className="fs-4 p-3">Contact</h2>
