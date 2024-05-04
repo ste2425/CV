@@ -21,8 +21,9 @@ export const cvData: ICV = {
         url: 'https://twitter.com/_s_cooper'
     }],
     introduction: [
-        'I\'m a software engineer with experience in the HR, Payroll and Financial Regulation sectors. I recently led a team as a Senior developer working on greenfield projects migrating legacy systems to new platforms. Currently I work in a team of three other very skilled engineers. We collaborate closely designing and building new features as well as tackling bugs and technical debt to provide value to our customers. ',
-        'I have several personal projects which I use to learn technologies I don\'t get the opportunity to use at work. Most recently being C++ in an embedded ESP32 environment where I\'m implementing Bluetooth controller support in my Sony PSP. '
+        'I\'m a software engineer with extensive experience working in full stack projects and a passion for JavaScript. I feel equally at home working in NodeJS or C# to build highly scalable RESTful APIs as I do working in Angular or React. I was recently the senior engineer taking ownership of a large scale greenfield React application powered by a series of NestJs based APIs.',
+        'Currently I\'m back in the .NET world taking ownership of a project to replace an MVC based UI with Angular.',
+        'My most recent personal project was the CV you\'re reading now. It is a NextJS based application, built using GitHub Actions. The PDF export is performed with Playwright as part of CI. I have several personal projects which I use to help learn new technologies, or refresh existing technologies, which my day-to-day job doesn\'t allow. Most recently being C++ in an embedded ESP32 environment where I\'m implementing Bluetooth controller support in my Sony PSP. '
     ],
     knownTechnologies: ['NodeJS', 'NestJS', 'Angular', 'React', '.NET Core', 'MVC', 'Banjo', 'NextJS', 'Kazooie'],
     projects: [{
